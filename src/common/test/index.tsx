@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { actionCreators, ITestState } from './store';
 
 export interface IHomePageState {
   name: string
@@ -35,4 +36,22 @@ class Test extends React.PureComponent<IHomePageProps, IHomePageState> {
   }
 }
 
-export default connect(null, null)(Test);
+// const mapStateToProps = (state:actionCreators.TestAction) => {
+//   return {
+//     name: state.getIn(['test', 'name'])
+//   }
+// }
+
+function mapStateToProps({ name }: ITestState) {
+  return {
+    name: name.getIn(['test', 'name'])
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Test);

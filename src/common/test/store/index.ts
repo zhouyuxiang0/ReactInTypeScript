@@ -1,8 +1,8 @@
 import * as actionCreators from './actionCreators';
 import * as constants from './constants';
 
-import reducer from './reducer';
+import reducer,{ ITestState } from './reducer';
 
 
 
-export { reducer, actionCreators, constants }
+export { ITestState, reducer, actionCreators, constants }
