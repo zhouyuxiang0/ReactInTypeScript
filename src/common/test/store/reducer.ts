@@ -3,15 +3,7 @@ import * as constants from './constants';
 import { fromJS } from 'immutable';
 import { TestAction } from './actionCreators';
 
-
-
-export interface ITestState {
-  name: string,
-  set?: any,
-  getIn?: any
-}
-
-const defaultState: ITestState = fromJS({
+const defaultState: any = fromJS({
   name: ""
 });
 
