@@ -36,15 +36,9 @@ class Test extends React.PureComponent<IHomePageProps, IHomePageState> {
   }
 }
 
-// const mapStateToProps = (state:actionCreators.TestAction) => {
-//   return {
-//     name: state.getIn(['test', 'name'])
-//   }
-// }
-
-function mapStateToProps({ name }: ITestState) {
+const mapStateToProps = (state:ITestState) => {
   return {
-    name: name.getIn(['test', 'name'])
+    name: state.getIn(['test', 'name'])
   }
 }
 
