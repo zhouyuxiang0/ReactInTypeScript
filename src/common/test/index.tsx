@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { actionCreators, ITestState } from './store';
+import { ITestState } from './store';
 
 export interface IHomePageState {
   name: string

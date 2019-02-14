@@ -8,6 +8,7 @@ import { TestAction } from './actionCreators';
 export interface ITestState {
   name: string,
   set?: any,
+  getIn?: any
 }
 
 const defaultState: ITestState = fromJS({
